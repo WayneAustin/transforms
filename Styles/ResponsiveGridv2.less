@@ -1,0 +1,58 @@
+﻿/*variables*/
+
+/*mixins*/
+.group() {
+	zoom:1;
+	&:after, &:before { content:"";	display:table; }
+	&:after { clear:both; }
+}
+
+/*structure*/
+body { margin:0; padding:0;
+	* { box-sizing:border-box; font:normal normal 400 1em/1 arial,helvetica,sans-serif; }
+	#site-container { position:relative; width:100%; height:100%;
+		>header { clear:both; width:100%; height:100px; background:#121212; 
+			h1 { color:#e5e5e5; }
+		}
+		>article { display:none; position:absolute; width:40%; height:100%; background:#fff; border:solid 1px #c0c0c0; }
+		>nav { clear:both; width:100%;
+			ul { .group(); margin:0; padding:0; 
+				li { float:left; min-width:150px; height:150px; margin:0; padding:15px; list-style-type:none;
+					a { display:block; position:relative; height:100%; background:#f4f4f4; 
+						strong { display:block; font-size:1em; text-align:center; }
+						&.selected { border:solid 2px #121212; }
+					}
+				}
+				&.columns-2 li { width:50%; }
+				&.columns-3 li { width:33.33%%; }
+				&.columns-4 li { width:25%; 
+					&.push { margin-right:40%; }
+				}
+				&.columns-5 li { width:20%; 
+					&.push { margin-right:60%; }
+				}
+				&.columns-6 li { width:16.66%; 
+					&.push { margin-right:50%; }
+				}
+				&.columns-7 li { width:14.28%; 
+					&.push { margin-right:57.16%; }
+				}
+				&.columns-8 li { width:12.5%; 
+					&.push { margin-right:50%; }
+				}
+				&.columns-9 li { width:11.1%; 
+					&.push { margin-right:44.5%; }
+				}
+				&.columns-10 li { width:10%; 
+					&.push { margin-right:40%; }
+				}
+				&.columns-11 li { width:9.091%; 
+					&.push { margin-right:36.364%; }
+				}
+				&.columns-12 li { width:8.33%; 
+					&.push { margin-right:33.32%; }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+﻿
+/*structure*/
+html {height:100%; }
+body { position:relative; height:100%; margin:0; padding:0; overflow:hidden; }
+body * { box-sizing:border-box; font:normal normal 400 1em/1 arial,helvetica,sans-serif; }
+body #Stage { position:relative; width:105%; height:105%; margin:0; padding:0; overflow:scroll; -webkit-perspective:800; -webkit-perspective-origin:50% 50%; -webkit-transform-style: preserve-3d; }
+body #Stage .fixed { position:absolute; top:50%; left:50%; width:400px; height:400px; margin:-200px 0 0 -200px; }
+body #Stage .fixed .scene { position:relative; top:50%; left:50%; width:400px; height:400px; margin:-200px 0 0 -200px; -webkit-transform-style: preserve-3d; -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); z-index:2; }
+body #Stage .fixed .scene div { position:absolute; width:400px; height:400px; margin:0; padding:0; list-style-type:none; opacity:0.8; border:solid 1px #333; }
+body #Stage .fixed .scene div.item-1 { -webkit-transform: translateX(0px) translateY(200px) translateZ(00px) rotateX(90deg) rotateY(0deg) rotateZ(0deg); background-position:0 bottom;}
+body #Stage .fixed .scene div.item-2 { -webkit-transform: translateX(0px) translateY(0px) translateZ(-200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); background-position:-150px bottom;}
+body #Stage .fixed .scene div.item-3 { -webkit-transform: translateX(0px) translateY(-200px) translateZ(00px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg); background-position:-300px bottom;}
+body #Stage .fixed .scene div.item-4 { -webkit-transform: translateX(0px) translateY(0px) translateZ(200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); background-position:-450px bottom;}
+body #Stage .fixed .scene div.item-5 { -webkit-transform: translateX(200px) translateY(0px) translateZ(00px) rotateX(0deg) rotateY(90deg) rotateZ(0deg); background-position:-600px bottom;}
+body #Stage .fixed .scene div.item-6 { -webkit-transform: translateX(-200px) translateY(0px) translateZ(00px) rotateX(0deg) rotateY(-90deg) rotateZ(0deg); background-position:-750px bottom;}
+body #Stage .scroll-stretch { position:absolute; top:-5000px; left:-5000px; width:10000px; height:10000px; z-index:1; }
+	
+body #Stage .fixed .scene div.page-container header { clear:both; width:100%; height:100px; background:#121212; }
+body #Stage .fixed .scene div.page-container header h1 { color:#e5e5e5; }
+body #Stage .fixed .scene div.page-container article { display:none; position:absolute; width:40%; height:100%; background:#fff; border:solid 1px #c0c0c0; }
+body #Stage .fixed .scene div.page-container nav { clear:both; width:100%;}
+body #Stage .fixed .scene div.page-container nav ul { zoom:1; margin:0; padding:0; }
+body #Stage .fixed .scene div.page-container nav ul:after { clear:both; }
+body #Stage .fixed .scene div.page-container nav ul:after, 
+body #Stage .fixed .scene div.page-container nav ul:before { content:"";display:table; }
+body #Stage .fixed .scene div.page-container nav ul li { float:left; min-width:150px; height:150px; margin:0; padding:15px; list-style-type:none;}
+body #Stage .fixed .scene div.page-container nav ul li a { display:block; position:relative; height:100%; background:#f4f4f4; }
+body #Stage .fixed .scene div.page-container nav ul li a strong { display:block; font-size:1em; text-align:center; }
+body #Stage .fixed .scene div.page-container nav ul li a.selected { border:solid 2px #121212; }
+					
+body #Stage .fixed .scene div.page-container nav ul.columns-2 li { width:50%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-3 li { width:33.33%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-4 li { width:25%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:40%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-5 li { width:20%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:60%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-6 li { width:16.66%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:50%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li { width:14.28%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:57.16%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-8 li { width:12.5%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:50%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-9 li { width:11.1%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:44.5%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-10 li { width:10%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:40%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-11 li { width:9.091%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:36.364%; }
+				
+body #Stage .fixed .scene div.page-container nav ul.columns-12 li { width:8.33%; }
+body #Stage .fixed .scene div.page-container nav ul.columns-7 li.push { margin-right:33.32%; }
